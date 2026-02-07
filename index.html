@@ -26,6 +26,26 @@
     .linkrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
     .chip{display:inline-block;background:#0f1626;border:1px solid #22304d;border-radius:999px;padding:6px 10px;font-size:13px}
 
+    /* storytelling blocks */
+    .story{
+      background:#0f1626;
+      border:1px solid #22304d;
+      border-radius:14px;
+      padding:12px 14px;
+      margin-top:12px;
+    }
+    .story h3{
+      margin:0 0 6px;
+      font-size:16px;
+      color:#e8eaf0;
+    }
+    .story ul{
+      margin:8px 0 0 18px;
+      color:#c9d2e3;
+      line-height:1.6;
+    }
+    .muted{opacity:.9}
+
     /* project image */
     .project-img{
       width:100%;
@@ -43,7 +63,7 @@
       box-shadow:0 18px 55px rgba(0,0,0,.45);
     }
 
-    /* Lightbox (click to enlarge) */
+    /* Lightbox */
     .lightbox{
       position:fixed; inset:0;
       background:rgba(0,0,0,.86);
@@ -115,20 +135,76 @@
 
         <!-- Project 1 -->
         <div class="card">
-          <h2>1) Sales Performance Dashboard (Power BI)</h2>
-          <p><b>Problem:</b> Need clear visibility of sales performance and profit drivers over time.</p>
-          <p><b>Approach:</b> Built KPI cards, time trends, category breakdown, and a loss deep-dive view.</p>
-          <p><b>Impact:</b> Faster analysis for decision-making and clearer margin leakage signals.</p>
+          <h2>1) Sales Performance Dashboard (Power BI + SQL)</h2>
+
+          <p><b>Problem:</b> Stakeholders need a fast, clear view of sales performance and profit drivers over time — and a way to spot margin leakage.</p>
+          <p><b>Approach:</b> Built a SQL order-item dataset + monthly KPI layer, then created Power BI views (Overview → Drivers → Loss Deep Dive).</p>
+          <p><b>Impact:</b> Faster decision-making with clear KPI tracking and actionable insights on where profit is being lost.</p>
 
           <div class="linkrow">
             <a class="chip" href="https://drive.google.com/file/d/1WKu7OaWzKFp8nBmIPHwlWunKsFIWa4GM/view?usp=drive_link" target="_blank" rel="noreferrer">Dashboard file (Drive)</a>
-            <a class="chip" href="#" target="_blank" rel="noreferrer">Case study PDF</a>
+            <a class="chip" href="https://github.com/peerapoludommalee" target="_blank" rel="noreferrer">GitHub</a>
           </div>
 
-          <!-- IMPORTANT: make sure these file names exist in your repo -->
-          <img src="Page1.png" alt="Dashboard page 1" class="project-img" data-full="Page1.png" />
-          <img src="Page2.png" alt="Drivers Category & Profit" class="project-img" data-full="Page2.png" />
-          <img src="Page3.png" alt="Loss & Margin Deep Dive" class="project-img" data-full="Page3.png" />
+          <!-- STORY STEP 1 -->
+          <div class="story">
+            <h3>Step 1 — Executive Overview (What’s happening?)</h3>
+            <p class="muted">Start with KPI cards + trends to quickly answer: “Are we growing? Are we profitable?”</p>
+            <ul>
+              <li>Shows overall Sales, Profit, Orders, AOV, Margin %</li>
+              <li>Trend view highlights strong/weak months at a glance</li>
+            </ul>
+          </div>
+          <img
+            src="Assets/image/dashboard-overview.png"
+            alt="Power BI — Sales Performance Overview"
+            class="project-img"
+            data-full="Assets/image/dashboard-overview.png"
+          />
+
+          <!-- STORY STEP 2 -->
+          <div class="story">
+            <h3>Step 2 — Drivers (What’s driving sales & profit?)</h3>
+            <p class="muted">Break down performance by Category/Sub-category to find where margin is concentrated.</p>
+            <ul>
+              <li>Identifies high-profit vs low-margin segments</li>
+              <li>Helps prioritize focus without needing more volume</li>
+            </ul>
+          </div>
+          <img
+            src="Assets/image/dashboard-sales-profit.png"
+            alt="Power BI — Drivers (Category & Profit)"
+            class="project-img"
+            data-full="Assets/image/dashboard-sales-profit.png"
+          />
+
+          <!-- STORY STEP 3 -->
+          <div class="story">
+            <h3>Step 3 — Loss & Margin Deep Dive (Where are we leaking profit?)</h3>
+            <p class="muted">Zoom into loss-making orders/lines and pinpoint recurring loss drivers.</p>
+            <ul>
+              <li>Highlights loss distribution across orders/segments</li>
+              <li>Action ideas: review pricing/discounts, control loss SKUs, improve mix</li>
+            </ul>
+          </div>
+          <img
+            src="Assets/image/dashboard-customer-segment.png"
+            alt="Power BI — Loss & Margin Deep Dive"
+            class="project-img"
+            data-full="Assets/image/dashboard-customer-segment.png"
+          />
+
+          <!-- SQL BACKBONE -->
+          <div class="story">
+            <h3>SQL Backbone (How KPIs were built)</h3>
+            <p class="muted">SQL joins order headers + order details, then aggregates monthly KPIs (Sales, Profit, Units, Orders, AOV, Margin %).</p>
+          </div>
+          <img
+            src="Assets/image/sql-queries-overview.png"
+            alt="SQL — Join Orders + Order Details + Monthly KPI Summary"
+            class="project-img"
+            data-full="Assets/image/sql-queries-overview.png"
+          />
         </div>
 
         <!-- Project 2 -->
@@ -139,7 +215,7 @@
           <p><b>Impact:</b> Highlighted top loss drivers and recommended actions (pricing, minimum order, route consolidation).</p>
 
           <div class="linkrow">
-            <a class="chip" href="#" target="_blank" rel="noreferrer">SQL / GitHub link</a>
+            <a class="chip" href="https://github.com/peerapoludommalee" target="_blank" rel="noreferrer">SQL / GitHub link</a>
             <a class="chip" href="#" target="_blank" rel="noreferrer">Case study PDF</a>
           </div>
         </div>
