@@ -8,11 +8,8 @@ This project demonstrates SQL skills: joining order header + order details and g
 
 ## Key SQL Queries
 
-### 1) Join Orders + Order Details
+### 1) Join Orders + Order Details + Monthly KPI Summary
 ![Join Orders and Details](Assets/image/sql-queries-overview.png)
-
-### 2) Monthly KPI Summary
-![Monthly KPI Summary](Assets/image/sql-monthly-kpi.png)
 
 ## Metrics
 - **Sales** = SUM(amount)
