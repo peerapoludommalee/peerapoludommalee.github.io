@@ -207,21 +207,98 @@
           />
         </div>
 
-        <!-- Project 2 -->
-        <div class="card">
-          <h2>2) SQL Analysis: Customer Profitability</h2>
-          <p><b>Problem:</b> Identify profitable vs loss-making customers and the drivers behind it.</p>
-          <p><b>Approach:</b> Joined finance + operations data, calculated margin by customer/route/service type.</p>
-          <p><b>Impact:</b> Highlighted top loss drivers and recommended actions (pricing, minimum order, route consolidation).</p>
+<!-- Project 2 -->
+<div class="card">
+  <h2>2) SQL Analysis: Customer Profitability (Logistics)</h2>
 
-          <div class="linkrow">
-            <a class="chip" href="https://github.com/peerapoludommalee" target="_blank" rel="noreferrer">SQL / GitHub link</a>
-            <a class="chip" href="#" target="_blank" rel="noreferrer">Case study PDF</a>
-          </div>
-        </div>
+  <p><b>Problem:</b> Identify profitable vs loss-making customers and explain the drivers behind profitability (cost, weight, service level).</p>
+  <p><b>Approach:</b> Built a shipment-level profitability view (revenue vs ship_cost), aggregated results into a customer scorecard, ranked top/bottom customers, and analyzed late delivery impact + monthly profit trend (window function).</p>
+  <p><b>Impact:</b> Highlighted loss drivers and recommended actions: repricing, minimum charge, and carrier/route optimization for high-risk lanes.</p>
 
-      </div>
-    </div>
+  <div class="linkrow">
+    <!-- TODO: replace href with your real repo link -->
+    <a class="chip" href="https://github.com/peerapoludommalee/logistics-customer-profitability-sql" target="_blank" rel="noreferrer">SQL / GitHub link</a>
+
+    <!-- TODO: replace href with your PDF link (Drive or GitHub release) -->
+    <a class="chip" href="#" target="_blank" rel="noreferrer">Case study PDF</a>
+  </div>
+
+  <!-- STORY STEP 0 -->
+  <div class="story">
+    <h3>Step 0 — SQL Overview (How the analysis is structured)</h3>
+    <p class="muted">A quick map of the queries used in this case study: preview data → shipment summary → customer ranking → scorecard → late impact → trend.</p>
+  </div>
+  <img
+    src="Assets/image/sql-queries-overview.png"
+    alt="SQL — Analysis overview"
+    class="project-img"
+    data-full="Assets/image/sql-queries-overview.png"
+  />
+
+  <!-- STORY STEP 1 -->
+  <div class="story">
+    <h3>Step 1 — Delivered Shipments & Shipment Summary</h3>
+    <p class="muted">Filter to delivered shipments, then aggregate item-level data into one row per shipment (revenue, weight, ship_cost).</p>
+    <ul>
+      <li>Ensures metrics are based on completed shipments</li>
+      <li>Creates a clean shipment-level dataset for profitability</li>
+    </ul>
+  </div>
+  <img
+    src="Assets/image/sql-preview-and-summery.png"
+    alt="SQL — Delivered shipments preview and shipment summary"
+    class="project-img"
+    data-full="Assets/image/sql-preview-and-summery.png"
+  />
+
+  <!-- STORY STEP 2 -->
+  <div class="story">
+    <h3>Step 2 — Top vs Bottom Customers by Profit (Window Function)</h3>
+    <p class="muted">Rank customers by total gross profit to quickly identify best-performing and loss-making accounts.</p>
+    <ul>
+      <li>Uses <b>ROW_NUMBER()</b> to rank customers</li>
+      <li>Helps prioritize retention vs repricing decisions</li>
+    </ul>
+  </div>
+  <img
+    src="Assets/image/sql-top-10-bottom-10.png"
+    alt="SQL — Top 10 and Bottom 10 customers by profit"
+    class="project-img"
+    data-full="Assets/image/sql-top-10-bottom-10.png"
+  />
+
+  <!-- STORY STEP 3 -->
+  <div class="story">
+    <h3>Step 3 — Customer Scorecard (Unit Economics)</h3>
+    <p class="muted">Summarize revenue, ship_cost, profit margin, and cost per kg to explain why some customers lose money.</p>
+    <ul>
+      <li>Separates “high volume” from “high margin” customers</li>
+      <li>Flags customers with high <b>cost/kg</b> as repricing candidates</li>
+    </ul>
+  </div>
+  <img
+    src="Assets/image/sql-customer-score-and-late-impact.png"
+    alt="SQL — Customer scorecard and late impact"
+    class="project-img"
+    data-full="Assets/image/sql-customer-score-and-late-impact.png"
+  />
+
+  <!-- STORY STEP 4 -->
+  <div class="story">
+    <h3>Step 4 — Monthly Profit Trend (Running Total)</h3>
+    <p class="muted">Track profit by month and calculate cumulative profit using a window function to show business direction over time.</p>
+    <ul>
+      <li>Monthly profit trend for performance monitoring</li>
+      <li><b>SUM() OVER</b> creates cumulative profit (running total)</li>
+    </ul>
+  </div>
+  <img
+    src="Assets/image/sql-monthly-profit.png"
+    alt="SQL — Monthly profit trend and cumulative profit"
+    class="project-img"
+    data-full="Assets/image/sql-monthly-profit.png"
+  />
+</div>
 
     <!-- ABOUT -->
     <div id="about" class="card">
