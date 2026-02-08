@@ -14,9 +14,9 @@ This repo hosts my portfolio website (GitHub Pages) showcasing SQL + Power BI pr
 **Impact:** Faster decision-making with clear KPI tracking and actionable insights on where profit is being lost.
 
 **Screenshots**
-- Overview: ![Corn Overview](Assets/image/dashboard-overview.png)
-- Supply Drivers: ![Supply Drivers](Assets/image/dashboard-sales-profit.png)
-- Ending Stocks: ![Ending Stocks](Assets/image/dashboard-customer-segment.png)
+- Overview: ![Sales Overview](Assets/image/dashboard-overview.png)
+- Drivers: ![Drivers](Assets/image/dashboard-sales-profit.png)
+- Loss & Margin Deep Dive: ![Deep Dive](Assets/image/dashboard-customer-segment.png)
 
 **Links**
 - Dashboard file (Drive): https://drive.google.com/drive/folders/13CW7USVuTRvtlcCuV8QTMpbkP0w-WBNF?usp=drive_link
@@ -29,8 +29,8 @@ This repo hosts my portfolio website (GitHub Pages) showcasing SQL + Power BI pr
 **Impact:** Highlighted loss drivers and recommended actions: repricing, minimum charge, and carrier/route optimization for high-risk lanes.
 
 **Screenshots**
-- Overview: ![Corn Overview](Assets/image/sql-preview-and-summery.png)
-- Supply Drivers: ![Supply Drivers](Assets/image/sql-customer-score-and-late-impact.png)
+- Delivered Shipments & Shipment Summary: ![Shipment Summary](Assets/image/sql-preview-and-summery.png)
+- Customer Scorecard: ![Customer Scorecard](Assets/image/sql-customer-score-and-late-impact.png)
 
 **Links**
 - Case study PDF: https://drive.google.com/file/d/12rUsYnUN4nRyba3AC4yoYRaOBlHDbLTw/view?usp=drive_link
