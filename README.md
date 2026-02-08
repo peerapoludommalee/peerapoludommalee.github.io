@@ -30,7 +30,7 @@ This repo hosts my portfolio website (GitHub Pages) showcasing SQL + Power BI pr
 
 **Screenshots**
 - Delivered Shipments & Shipment Summary: ![Shipment Summary](Assets/image/sql-preview-and-summery.png)
-- Customer Scorecard: ![Customer Scorecard](Assets/image/sql-customer-score-and-late-impact.png)
+- Ranking: ![Ranking](Assets/image/sql-top-10-bottom-10.png)
 
 **Links**
 - Case study PDF: https://drive.google.com/file/d/12rUsYnUN4nRyba3AC4yoYRaOBlHDbLTw/view?usp=drive_link
