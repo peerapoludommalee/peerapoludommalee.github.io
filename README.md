@@ -30,7 +30,7 @@ This repo hosts my portfolio website (GitHub Pages) showcasing SQL + Power BI pr
 
 **Screenshots**
 - Overview: ![Corn Overview](Assets/image/sql-preview-and-summery.png)
-- Supply Drivers: ![Supply Drivers](Assets/image/ql-top-10-bottom-10.png)
+- Supply Drivers: ![Supply Drivers](Assets/image/sql-customer-score-and-late-impact.png)
 
 **Links**
 - Case study PDF: https://drive.google.com/file/d/12rUsYnUN4nRyba3AC4yoYRaOBlHDbLTw/view?usp=drive_link
