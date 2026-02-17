@@ -403,6 +403,83 @@
           />
         </article>
 
+
+
+        <!-- Project 4 -->
+<article class="card">
+  <h2>4) OTIF Performance Dashboard (PostgreSQL + SQL + Power BI)</h2>
+
+  <p><b>Problem:</b> Supply chain team needs a clear view of delivery service level (On-time, In-full, OTIF) and the ability to drill down by month, category, region, customer segment, and product.</p>
+  <p><b>Approach:</b> Built a star-schema dataset in PostgreSQL, created a clean semantic layer with SQL views (<b>vw_orders</b>, <b>vw_monthly_kpi</b>, <b>vw_product_kpi</b>), then connected Power BI to deliver an interactive executive dashboard.</p>
+  <p><b>Impact:</b> Faster performance monitoring and root-cause analysis—users can identify low-OTIF products/segments, detect monthly spikes, and prioritize improvement actions.</p>
+
+  <div class="linkrow">
+    <a class="chip" href="https://github.com/peerapoludommalee" target="_blank" rel="noreferrer">GitHub (Project 4 repo)</a>
+    <a class="chip" href="#" target="_blank" rel="noreferrer">PBIX / PDF (Drive)</a>
+    <a class="chip" href="#" target="_blank" rel="noreferrer">SQL Script</a>
+  </div>
+
+  <div class="story">
+    <h3>Step 1 — Data Model (Star Schema)</h3>
+    <p class="muted">Set up a fact table for order lines and dimensions for customer, product, date, and targets. This ensures clean slicing/filtering and consistent KPIs.</p>
+    <ul>
+      <li>Fact: <b>fact_order_line</b> (order_qty, delivery_qty, delay_days, flags)</li>
+      <li>Dims: <b>dim_customer</b>, <b>dim_product</b>, <b>dim_date</b>, <b>dim_targets_order</b></li>
+      <li>Goal: Make Power BI model stable + scalable</li>
+    </ul>
+  </div>
+
+  <div class="story">
+    <h3>Step 2 — SQL Semantic Layer (Views)</h3>
+    <p class="muted">Created a single source of truth using views to avoid repeated joins inside Power BI and keep KPIs consistent.</p>
+    <ul>
+      <li><b>vw_orders</b>: joined fact + dims (ready for analysis)</li>
+      <li><b>vw_monthly_kpi</b>: monthly totals + rates</li>
+      <li><b>vw_product_kpi</b>: product-level OTIF ranking</li>
+    </ul>
+  </div>
+
+  <img
+    src="Assets/image/SQL OTIF1.png"
+    alt="SQL — Create vw_orders and KPI queries"
+    class="project-img"
+    data-full="Assets/image/SQL OTIF1.png"
+  />
+  <img
+    src="Assets/image/SQL OTIF2.png"
+    alt="SQL — Retention, target vs actual, and segment analysis"
+    class="project-img"
+    data-full="Assets/image/SQL OTIF2.png"
+  />
+
+  <div class="story">
+    <h3>Step 3 — Dashboard (Executive Overview)</h3>
+    <p class="muted">Delivered a one-page dashboard designed for fast decision-making: headline KPIs + trends + breakdowns + top/bottom products.</p>
+    <ul>
+      <li>KPI cards: <b>OTIF Rate</b>, On-time Rate, In-full Rate, Total Qty, Avg Delay</li>
+      <li>Trends: OTIF over time (YearMonth axis)</li>
+      <li>Breakdowns: Category / Region / Segment</li>
+      <li>Ranking: OTIF by product (top/bottom)</li>
+    </ul>
+  </div>
+
+  <img
+    src="Assets/image/dashboard.png"
+    alt="Power BI — OTIF Dashboard Overview (2024-2025)"
+    class="project-img"
+    data-full="Assets/image/dashboard.png"
+  />
+
+  <div class="story">
+    <h3>Insights (Example Findings)</h3>
+    <ul>
+      <li>OTIF peaked around <b>Jul 2024</b> and then normalized—likely driven by category mix or operational stability.</li>
+      <li>Region performance is close, but product-level OTIF shows clear outliers worth investigating.</li>
+      <li>Delay metric should be monitored as <b>Late Rate</b> or <b>Avg Delay (Late Only)</b> (not SUM delay_days).</li>
+    </ul>
+  </div>
+</article>
+
       </div>
     </section>
 
