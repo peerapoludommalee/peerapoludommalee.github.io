@@ -52,6 +52,23 @@ This repo hosts my portfolio website (GitHub Pages) showcasing SQL + Power BI pr
 
 ---
 
+### 4) OTIF Performance Dashboard (Supply Chain Analytics)
+**Problem**: Operations teams need visibility into delivery service performance to identify delays, fulfillment issues, and improvement opportunities across products and regions.
+**Approach**: Built a PostgreSQL star schema (fact + dimensions) and SQL KPI views, then developed a Power BI dashboard to monitor OTIF, On-Time, In-Full, volume, and delay trends with category, region, and product breakdowns.
+**Impact**: Enabled quick identification of low-performance segments and operational bottlenecks, supporting data-driven improvements in delivery reliability.
+
+**Screenshots**
+- Overview: ![OTIF 2024-2025 Overview](Assets/image/dashboard.png)
+- SQL Layer 1: ![SQL](Assets/image/SQLOTIF1.png)
+- SQL Layer 2: ![SQL](Assets/image/SQLOTIF2.png)
+Links
+
+
+Dashboard file (Drive): your link here
+SQL Scripts (GitHub): your link here
+
+---
+
 ## Tech
 - GitHub Pages
 - HTML/CSS/JavaScript
