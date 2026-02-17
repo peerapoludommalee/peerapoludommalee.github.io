@@ -61,11 +61,13 @@ This repo hosts my portfolio website (GitHub Pages) showcasing SQL + Power BI pr
 - Overview: ![OTIF 2024-2025 Overview](Assets/image/dashboard.png)
 - SQL Layer 1: ![SQL](Assets/image/SQLOTIF1.png)
 - SQL Layer 2: ![SQL](Assets/image/SQLOTIF2.png)
-Links
+- SQL Layer 3: ![SQL](Assets/image/SQLOTIF3.png)
+- SQL Layer 3: ![SQL](Assets/image/SQLOTIF4.png)
+  
+**Links**
 
-
-Dashboard file (Drive): your link here
-SQL Scripts (GitHub): your link here
+Dashboard file (Drive): [Dashboard file](https://drive.google.com/drive/u/1/folders/1AtvOfVrSF89C8h8tjJGl08Iy-0w_nKdG)
+SQL Scripts (GitHub): [SQL Scripts](https://drive.google.com/drive/u/1/folders/1Zy2QbuTI1wjEZD3TpiCV-OJ1V7G-jUEd)
 
 ---
 
