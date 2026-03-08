@@ -480,6 +480,49 @@
   </div>
 </article>
 
+
+        <!-- Project 5 -->
+<article class="card">
+  <h2>5) E-commerce Funnel Overview Dashboard (PostgreSQL + SQL + Power BI)</h2>
+
+  <p><b>Problem:</b> E-commerce teams need a clear view of customer drop-off across the journey from Browse to Purchase, plus the ability to compare conversion and revenue performance by channel, device, and region.</p>
+  <p><b>Approach:</b> Cleaned and transformed funnel event data in PostgreSQL, built reusable SQL views for KPI tracking and funnel analysis, then connected Power BI to create an interactive one-page executive dashboard.</p>
+  <p><b>Impact:</b> The dashboard helps identify funnel bottlenecks, compare segment performance, and monitor revenue trends more efficiently for faster decision-making.</p>
+
+  <div class="linkrow">
+    <a class="chip" href="https://github.com/peerapoludommalee" target="_blank" rel="noreferrer">GitHub (Project 5 repo)</a>
+    <a class="chip" href="#" target="_blank" rel="noreferrer">PBIX / PDF (Drive)</a>
+    <a class="chip" href="#" target="_blank" rel="noreferrer">SQL Script</a>
+  </div>
+
+  <div class="story">
+    <h3>Project Workflow</h3>
+    <p class="muted">This project follows a simple end-to-end analytics workflow: data preparation in PostgreSQL, KPI logic in SQL views, and dashboard development in Power BI.</p>
+    <ul>
+      <li><b>Data Preparation:</b> standardized raw event-level data, validated event flow, and mapped funnel stages (Browse → Add to Cart → Checkout → Purchase)</li>
+      <li><b>SQL Layer:</b> created reusable views such as <b>funnel_base</b>, <b>session_funnel</b>, <b>funnel_stage_summary</b>, and <b>daily_trend</b></li>
+      <li><b>Dashboard:</b> built a one-page executive view with KPI cards, funnel stages, channel/device analysis, revenue trend, and filters</li>
+    </ul>
+  </div>
+
+  <img
+    src="Assets/image/Funnel_overview.png"
+    alt="Power BI — E-commerce Funnel Overview Dashboard"
+    class="project-img"
+    data-full="Assets/image/funnel_dashboard.png"
+  />
+
+  <div class="story">
+    <h3>Insights (Example Findings)</h3>
+    <ul>
+      <li><b>Google Ads</b> achieved the highest conversion rate across all channels.</li>
+      <li><b>Email</b> generated the highest average order value, indicating stronger purchase quality.</li>
+      <li>The largest funnel drop-off occurred between <b>Checkout</b> and <b>Purchase</b>.</li>
+      <li><b>Desktop</b> showed slightly stronger conversion performance than Mobile and Tablet in this dataset.</li>
+    </ul>
+  </div>
+</article>
+
       </div>
     </section>
 
